@@ -1,0 +1,74 @@
+#kdl_banner .container {
+  height: 467px;
+}
+
+#kdl_banner .container .banner_cont {
+  width: 670px;
+  height: 455px;
+  margin-top: 10px;
+  margin-right: 12px;
+}
+
+#kdl_banner .container .banner_side {
+  width: 290px;
+  height: 435px;
+  background-color: #f7f7f7;
+  padding: 10px;
+}
+
+#kdl_banner .container .banner_side h4 {
+  font-size: 15px;
+  height: 38px;
+  line-height: 28px;
+  color: #555555;
+  font-family: "microsoft yahei";
+}
+
+#kdl_banner .container .banner_side ul.city {
+  width: 288px;
+  height: 208px;
+}
+
+#kdl_banner .container .banner_side ul.city li {
+  float: left;
+  width: 50px;
+  height: 25px;
+  line-height: 25px;
+  margin-left: 1px;
+  margin-bottom: 1px;
+  text-align: center;
+  color: #666666;
+  background-color: #eeeeee;
+  padding: 0 10px;
+}
+
+#kdl_banner .container .banner_side ul.city .active {
+  background-color: #eb6161;
+  color: #fff;
+}
+
+#kdl_banner .container .banner_side ul.img {
+  width: 270px;
+  height: 144px;
+  overflow: hidden;
+}
+
+#kdl_banner .container .banner_side div.addr {
+  width: 278px;
+  height: 65px;
+}
+
+#kdl_banner .container .banner_side div.addr p.phone {
+  height: 26px;
+  line-height: 26px;
+  padding-left: 25px;
+  color: #4b4b4b;
+}
+
+#kdl_banner .container .banner_side div.addr p.ad {
+  height: 30px;
+  line-height: 15px;
+  font-size: 12px;
+  color: #555555;
+  padding-left: 25px;
+}

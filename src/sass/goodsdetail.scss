@@ -1,0 +1,322 @@
+body{background-color: #f5f5f5;}
+#kdl_search .container{background-color: #FFF;}
+#kdl_nav .nav_le ul{display:none}
+#kdl_detail_main .container{
+    .main_nav{
+        height: 30px;background-color:#fafafa;border:1px solid #e0e0e0;padding-left: 35px;font-family:"宋体";background: url("../img/smicon01.png") -130px -210px #fafafa no-repeat;
+        a{padding:0 5px;color:#666;line-height: 32px;font-family:"宋体";}
+    }
+    .tips{
+        height: 35px;line-height: 35px;color:#888;background-color: #FFF;padding-left: 10px;
+    }
+    .img{
+        padding-top: 10px;
+    }
+    .main_cont_detail{
+        height: 600px;margin-top: 20px;background-color: #FFF;
+        .main_cont_detail_le{
+            width: 400px;height: 600px;
+            .show_box{
+                width: 398px;height: 398px;
+                border:1px solid #eee;
+                position:relative;
+                img{ width: 398px;height: 398px;}
+            }
+            .wenxiTips{
+                width: 360px;height: 40px;
+                padding:20px;line-height: 20px;
+                color:#787878;
+            }
+            .smallImgs{
+                width: 315px;height: 64px;
+                margin: 10px auto;
+                li{
+                    float:left;
+                    width: 62px;
+                    width: 62px;
+                    border:1px solid #ddd;
+                    img{width: 60px;height: 60px;}
+                }
+            }
+        }
+        .main_cont_detail_ce{
+            width: 505px;height: 338px;
+            padding:20px 0 40px 26px;
+            h3{
+                line-height: 25px;height: 25px;
+                font-size:18px;color:#000;
+                font-family:"Microsoft yahei";
+                font-weight:bold;
+                padding-left: 10px;
+            }
+            .price{
+                height: 53px;
+                background:url("../img/pricebg.jpg") left top no-repeat #fef9f6;
+                margin-top: 15px;
+                .vip{
+                    display: block;
+                    width: 60px;
+                    height:53px;line-height: 53px;padding-left: 10px;
+                    font-family:"Microsoft yahei";
+                    
+                }
+                .price_num{
+                    width: 420px;height: 53px;
+                    .sp1{
+                        display: block;
+                        float:left;
+                        padding:5px;
+                        width: 16px;
+                        height: 20px;
+                        line-height:30px;
+                        font-size:16px;
+                        font-weight:bold;
+                        color:#f54343;
+                        text-align:center;
+                        margin-top: 7px;
+                    }
+                    .sp2{
+                        display: inline-block;
+                        height: 53px;
+                        line-height: 53px;
+                        font-size:28px;
+                        font-weight:bold;
+                        color:#f54343;
+                        font-family:"Microsoft yahei";
+                    }
+                }
+
+            }
+            .goods_info{
+                width: 505px;
+                height: 160px;
+                margin-top: 15px;
+                margin-left: 10px;
+                li{ 
+                    width: 505px;
+                    height: 18px;
+                    padding:4px 0;
+                    margin-bottom: 2px;
+                    span{
+                        display:block;
+                        float:left;
+                        width: 75px;
+                        height: 18px;
+                        line-height: 18px;
+                        font-size:12px;
+                        color:#9b9b9b;
+                        font-family:"宋体";
+                    }
+                }
+                li:last-child{
+                    height: 40px;
+                    line-height: 40px;
+                    .qty{
+                        display:block;
+                        float:left;
+                        width: 75px;
+                        height: 18px;
+                        line-height: 18px;
+                        font-size:12px;
+                        color:#9b9b9b;
+                        font-family:"宋体";
+                        margin-top: 11px;
+                    }
+                    input{
+                            width: 46px;height: 27px;padding:1px;border:1px solid #ddd;text-align:center;color:#555;line-height:28px;margin-right: 2px;
+                            float:left;
+                            margin-top: 4px;
+                        }
+                    .addOrDe{
+                        display: block;width: 16px;height: 28px;
+                        margin-left: 1px;
+                        margin-right: 10px;
+                        margin-top: 4px;
+                        a{
+                            display: block;width:16px;height: 14px;
+                            background:url("../img/kdlphicon.png") -249px -48px no-repeat;
+                            margin-bottom: 3px;
+                        }
+                        .decrease{
+                            background:url("../img/kdlphicon.png") -249px -62px no-repeat;
+                        }
+                    }
+                    .addToCart{
+                        width:159px;height:40px;margin-left: 10px;
+                        a{display: block;width:109px;height: 40px;padding:0 25px;color:#fff;text-align:center;line-height:40px;background-color: #f03b44;border-radius:2px;font-size:16px;
+                        font-family:"Microsoft yahei";}
+                    }
+                    .buy{
+                        width:125px;height: 38px;
+                        a{display: block;width:125px;height: 38px;line-height: 38px;
+                            border:1px solid #f03b44;
+                            font-size:16px;background-color: #f0f0f0;color:#f03b44;border-radius:2px;text-align:center;
+                            font-family:"Microsoft yahei";
+                        }
+                    }
+                }
+            }
+            .ser{
+                height: 32px;
+                margin-left:85px;
+                li{
+                    float:left;
+                    margin-right: 20px;
+                    a{
+                        display: block;
+                        width: 76px;
+                        height: 32px;
+                        line-height: 32px;
+                        font-size:12px;
+                        color:#555;
+                    }
+                    i{
+                        display:inline-block;                       
+                        width:17px;
+                        height:17px;
+                        background:url("../img/kdlphicon.png") -332px -49px no-repeat;
+                        float:left;
+                        margin-top: 6px;
+                        padding-left: 4px;
+                    }
+                }
+            }
+        }
+        .main_cont_detail_ri{
+            width: 209px;height: 511px;
+            padding:0 20px 20px 20px;
+            margin-top: 20px;
+            border-left:1px solid #f2f2f2;
+            h4{
+                height: 36px;line-height: 36px;font-size:16px;color:#101010;font-family:"Microsoft yahei";border-bottom:1px solid #e6e6e6;margin-bottom: 15px;
+            }
+            ul.city{
+                    li{
+                        float:left;width:54px;
+                        height: 23px;line-height: 23px;margin-bottom: 4px;text-align:center;color:#909090;padding:0 7px;
+                        background-color:#fff;
+                    }
+                    .active{background-color: #ff7e6f;color:#fff;}
+                }
+            .market_info{
+                width:209px;height:210px;
+                ul{
+                    width: 209px;height: 111px;position:relative;
+                    li{
+                        img{
+                            display: block;width: 209px;height: 111px;
+                        }
+                    }
+                    .hide{display:none;}
+                    .show{display:block;}
+                    a{
+                        display: block;width: 25px;height: 56px;position:absolute;opacity:0.2;top: 30px;
+                    }
+                    .a_le{background:url("../img/btn.png") no-repeat;left: 0;}
+                    .a_ri{background:url("../img/btn.png") right no-repeat;right: 0;}
+                    a:hover{opacity:0.4;}
+                }
+                .addr{
+                    margin-top: 10px;
+                    .phone{
+                        width: 184px;height: 26px;padding-left: 25px;line-height: 26px;color:#4b4b4b;background:url("../img/kdlphicon.png") -480px -4px no-repeat;
+                    }
+                    .ad{
+                        display: block;line-height:20px;color:#555;font-size:12px;
+                        i{
+                            display: inline-block;width: 26px;height: 18px;background:url("../img/kdlphicon.png") -479px -35px no-repeat;
+                        }
+                    }
+                }
+            }
+        }    
+    }
+    .main_cont_info{
+        margin-top: 20px;
+        .main_cont_info_le{
+            width: 200px;
+            .watch_rank{
+                width: 200px;
+                background-color: #FFF;
+                h4{
+                    width: 180px;height: 39px;padding: 0 10px;
+                    line-height: 39px;color:#000;
+                    font-size:16px;font-weight:bold;
+                    border-bottom:1px solid #e5e5e5;
+                }
+                ul{
+                    li{
+                        img{display: block;width: 100px;height: 100px;margin: 0 auto;}
+                        p{height: 20px;line-height: 20px;color:#646965;padding-left: 20px;}
+                        p:nth-child(3){
+                            color:#f54343;
+                        }
+                    }
+                }
+            }
+            .history{
+                margin-top: 10px;background-color: #FFF;
+                h4{width: 180px;height: 39px;border-bottom:1px solid #e5e5e5;line-height: 39px;padding:0 10px;font-weight:bold;font-size:16px;}
+                ul{
+                    width: 170px;margin:0 auto;
+                    li{
+                        width: 150px;height: 36px;padding:10px;
+                    }
+                }
+                .empty{
+                    width: 170px;height: 18px;margin:15px auto;padding: 5px 0;border-top:1px dotted #cbcbcb;line-height: 18px;text-align:right;
+                }
+            }
+        }
+        .main_cont_info_ri{
+            .info_detail{
+                width: 998px;height: 38px;border:1px solid #ccc;
+                line-height: 38px;background-color: #f7f7f7;
+                ul{
+                    li{
+                        float:left;
+                        width: 100px;height: 40px;line-height: 40px;
+                        text-align:center;
+                    }
+                }
+
+            }
+            .info{
+                width: 802px;
+                .info_box{
+                    width:802px;
+                    background-color: #FFF;
+                    .yaopin{
+                        width: 752px;
+                        padding:25px;
+                        ul:nth-child(1){
+                            li{
+                                float:left;
+                                width: 50%;height: 22px;line-height: 22px;padding:2px 0;color:#555;
+                                font-family:"Arial";
+                                span{color:#333;padding-right: 10px;}
+                            }
+                        }
+                        ul:nth-child(2){
+                            width: 752px;margin-top: 20px;margin-bottom: 20px;
+                            li{
+                                width: 752px;height: 22px;line-height: 22px;padding:2px 0;color:#555;
+                                font-family:"Arial";
+                                span{color:#333;padding-right: 10px;}
+                            }
+                        }
+                    }
+                    
+                }
+                .imgs{
+                    width: 802px;
+                    margin-top: 20px;
+                    background-color: #FFF;
+                    text-align:center;
+                    padding:20px 0;
+                }
+            }
+        }
+    }
+}
+

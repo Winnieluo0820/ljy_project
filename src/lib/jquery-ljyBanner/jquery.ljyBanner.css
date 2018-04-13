@@ -1,0 +1,21 @@
+/* 
+* @Author: Marte
+* @Date:   2018-04-03 11:10:19
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-04-09 16:13:27
+*/
+.banner{position:relative;overflow:hidden;}
+.banner img{display: block;}
+.banner ul{position:absolute;overflow:hidden;list-style: none;padding:0;margin:0;}
+.banner ul.horizontal li{float:left;}
+.banner ul.fade li{position:absolute;left:0;top:0;}
+.banner .page{position:absolute;left: 50%;bottom:10px;transform: translate(-50%);}
+.banner .banner_arrow_le{display:none;opacity:0.8;width: 45px;height: 100px;position:absolute;top: 177px;left: 0;background:url("../../img/arrow.png");}
+.banner .banner_arrow_ri{display:none;opacity:0.8;width: 45px;height: 100px;position:absolute;top: 177px;right: 0;background:url("../../img/arrow.png") right top;}
+.banner .page span.hor{display:inline-block;margin:0 4px;width:20px;height:20px;
+    line-height:20px;background-color:rgba(0,0,0,.6);text-align:center;color:#fff;
+    border-radius:50%;
+    box-shadow:0 0 10px rgba(0,0,0,.5);
+}
+.banner .page span.ver{display:block;margin:4px 0;width:20px;height:20px;line-height:20px;background-color:rgba(0,0,0,.6);text-align:center;color:#fff;border-radius: 50%;box-shadow:0 0 10px rgba(0,0,0,.5);}
+.banner .page span.active{background-color: rgba(255,0,0,.8)}

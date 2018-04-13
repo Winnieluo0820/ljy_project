@@ -1,0 +1,156 @@
+#kdl_reg_header .container {
+  width: 990px;
+  height: 90px;
+}
+
+#kdl_reg_header .container h1 {
+  width: 330px;
+  height: 90px;
+  background: url("../img/logo.jpg");
+}
+
+#kdl_reg_header .container h1 a {
+  display: block;
+  margin-top: 69px;
+}
+
+#kdl_reg_main .container {
+  width: 980px;
+  height: 436px;
+  margin-bottom: 70px;
+  border: 5px solid #f0f0f0;
+}
+
+#kdl_reg_main .container .reg_le {
+  width: 690px;
+  height: 297px;
+  margin-left: 20px;
+  padding-top: 40px;
+}
+
+#kdl_reg_main .container .reg_le h3 {
+  width: 690px;
+  height: 30px;
+  padding-bottom: 30px;
+  line-height: 30px;
+  font-size: 24px;
+  font-family: 'Microsoft yahei';
+  color: #333;
+  padding-left: 210px;
+}
+
+#kdl_reg_main .container .reg_le form label {
+  display: inline-block;
+  height: 60px;
+}
+
+#kdl_reg_main .container .reg_le form label span {
+  display: inline-block;
+  width: 108px;
+  padding-right: 20px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 14px;
+  text-align: right;
+  color: #555555;
+}
+
+#kdl_reg_main .container .reg_le form label span i {
+  color: #ff0000;
+  vertical-align: middle;
+  padding-right: 8px;
+}
+
+#kdl_reg_main .container .reg_le form label input {
+  width: 258px;
+  height: 18px;
+  padding: 8px 0px 8px 10px;
+  border: 1px solid #e2e2e2;
+  color: #999999;
+  font-size: 12px;
+}
+
+#kdl_reg_main .container .reg_le form label + span {
+  margin-left: 10px;
+  color: red;
+}
+
+#kdl_reg_main .container .reg_le form .check {
+  margin-left: 128px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+#kdl_reg_main .container .reg_le form .check a {
+  color: #005aa0;
+}
+
+#kdl_reg_main .container .reg_le form .btn_reg {
+  width: 270px;
+  height: 50px;
+  background-color: #f54343;
+  margin-left: 128px;
+  line-height: 50px;
+  font-size: 20px;
+  color: #fff;
+}
+
+#kdl_reg_main .container .reg_ri {
+  width: 265px;
+  height: 436px;
+  border-left: 1px solid #e3e3e3;
+}
+
+#kdl_reg_main .container .reg_ri h4 {
+  width: 175px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 45px 0 8px 0;
+  padding-left: 45px;
+}
+
+#kdl_reg_main .container .reg_ri .login_link {
+  display: block;
+  width: 176px;
+  height: 18px;
+  padding: 11px 0;
+  border: 1px solid #e3e3e3;
+  font-size: 14px;
+  margin-bottom: 30px;
+  text-align: center;
+  margin-left: 45px;
+  background-color: #f5f5f5;
+}
+
+#kdl_reg_main .container .reg_ri p {
+  height: 24px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+#kdl_reg_main .container .reg_ri ul {
+  padding-left: 45px;
+}
+
+#kdl_reg_main .container .reg_ri ul li {
+  float: left;
+  width: 43px;
+  height: 43px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 1px solid #ebebeb;
+  background: url("../img/kdlphicon.png") -380px -95px no-repeat;
+}
+
+#kdl_reg_main .container .reg_ri ul li:nth-child(2) {
+  background: url("../img/kdlphicon.png") -428px -95px no-repeat;
+}
+
+#kdl_reg_main .container .reg_ri ul li:hover {
+  border-color: #f97e87;
+}
+
+#kdl_reg_main .container .reg_ri img {
+  margin-top: 22px;
+}

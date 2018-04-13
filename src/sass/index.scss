@@ -1,0 +1,32 @@
+#kdl_banner .container{
+    height: 467px;
+    .banner_cont{
+        width: 670px;height: 455px;
+        margin-top: 10px;margin-right: 12px;   
+    }
+    .banner_side{
+        width: 290px;height: 435px;
+        background-color:#f7f7f7;
+        padding:10px;
+        h4{font-size:15px;height: 38px;line-height: 28px;color:#555555;font-family: "microsoft yahei";}
+        ul.city{
+            width: 288px;height: 208px;
+            li{
+                float:left;width: 50px;
+                height: 25px;line-height: 25px;margin-left: 1px;margin-bottom: 1px;text-align:center;color:#666666;
+                background-color:#eeeeee;
+                padding:0 10px;
+            }
+            .active{background-color: #eb6161;color:#fff;}
+        }
+        ul.img{
+            width: 270px;height: 144px;
+            overflow:hidden;
+        }
+        div.addr{
+            width: 278px;height: 65px;
+            p.phone{height: 26px;line-height: 26px;padding-left: 25px;color:#4b4b4b;}
+            p.ad{height: 30px;line-height: 15px;font-size:12px;color:#555555;padding-left: 25px;}
+        }
+    }
+}

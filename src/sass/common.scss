@@ -1,0 +1,273 @@
+$fontsize:12px;
+$color:#666666;
+$color_span:#f03b43;
+#kdl_header{
+    width: 100%;
+    height:35px;
+    background-color:#f9f9f9;
+    line-height: 35px;
+    .ht_left{
+        li{
+            float:left;
+            font-size:$fontsize;
+            color:$color;
+            margin-right: 15px;
+            a{color:$color;}
+        }
+        li:nth-child(1):hover a{color:$color_span;}
+        li:nth-child(3) a{color:$color_span;}
+        li:nth-child(4) a{color:$color_span;}
+    }
+    .ht_right{
+        li{
+            float:left;
+            position:relative;
+            span{
+                display: inline-block;
+                height: 11px;
+                line-height: 11px;
+                font-size:$fontsize;
+                color:$color;
+                padding:0 10px 0 10px;
+                border-right:2px solid #ccc;
+            }
+            i{
+                display: block;
+                width: 7px;
+                height: 4px;
+                background:url(../img/sprites.png) -2px -142px;
+                position: absolute;
+                right:8px;
+                top:15px;  
+            }
+            ul{display:none;}
+        }
+        li:nth-child(3) i{display: block;width: 9px;height: 16px;background:url(../img/sprites.png) -7px -122px;left: 8px;top:9px;}
+        li:last-child span{border-right:0 none;}
+        .li_co:hover span{color:$color_span;}
+        .ri_icon{padding-right:20px;}
+        .le_icon{padding-left: 20px;}
+    }
+}
+#kdl_search .container{
+    height: 95px;
+    h1{
+        width: 330px;
+        height: 90px;
+        background:url("../img/logo.jpg");
+        a{display: block;margin-top:70px;}
+    }
+    .se_center{
+        width: 550px;
+        height: 70px;
+        margin-top: 20px;
+        margin-left: -70px;
+        form{
+            width: 500px;
+            .txt{
+                width: 380px;
+                height:20px;
+                font-size:14px;
+                padding:5px 10px;
+                color:#999999;
+                line-height:20px;
+                border:2px solid #e3393c;
+                float:left;
+            }
+            .btn{
+                width:70px;height: 34px;
+                background-color: #e3393c;
+                color:#fff;
+                font-size: 14px;
+                font-weight: bold;
+                text-align:center;
+                cursor: pointer;
+                float:left;
+            }
+        }
+        ul{
+            width: 587px;
+            height: 36px;
+            li{
+                float:left;
+                line-height: 30px;
+                margin-right: 10px;
+                color:#999999;
+                a{color:#999999;}
+            }
+        }
+    }
+    .se_right{
+        width: 132px;
+        height: 82px;
+        padding-left: 45px;
+        ul{
+            margin-top: 13px;
+            li{
+                width: 95px;
+                height: 30px;
+                border:1px solid #efefef;
+                padding-left: 35px;
+                line-height: 30px;
+                margin-bottom: 5px;
+                background:url(../img/sprites2.png) -170px -60px no-repeat;
+                background-color:#f7f7f7;
+                a{
+                    color:#555555;
+                    margin-right: 10px;
+                    span{color:#f54343;}
+                    strong{display: inline-block;color:#f54343;font-weight:bold;padding:0px 2px;}
+                }
+                a:hover{color:#f54343;text-decoration:underline;}               
+            }
+            li:nth-child(2){
+                background:url(../img/sprites2.png) -170px -90px no-repeat;
+                background-color:#f7f7f7;
+            }
+            li:nth-child(2):hover{
+                border:1px solid #f54343;
+                a:hover{color:#f54343;text-decoration:none;}
+            }
+        }
+    }
+    .se_Rlogo{
+        width: 205px;height: 73px;margin-top: 13px;
+        background:url("../img/logo2.png");
+    }
+}
+#kdl_nav .container{
+    height: 40px;
+    .nav_le{
+        width: 210px;
+        a.fenlei{
+            background-color:#db3135;
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            font-size:14px;
+            font-family: "microsoft yahei";
+            color:#fff;
+            font-weight:bold;
+            padding-left: 20px;
+        }
+        ul{
+            width: 206px;height: 446px;
+            padding:10px 0;
+            background-color:#f6f6f6;
+            font-family: "microsoft yahei";
+            li{
+                width:186px;height:28px;
+                line-height:28px;
+                padding-left: 20px;
+                a{
+                    color:#000;font-size:14px;
+                    font-weight:none;
+                }
+            }
+        }
+    }
+    .nav_cen{
+        width: 750px;
+        background-color:#f03b44;
+        li{
+            float:left;
+            height: 40px;
+            line-height: 40px;
+            a{  
+                display: block;
+                padding:0 18px;
+                color:#fff;
+                font-size:14px;
+                font-family: "microsoft yahei"; 
+                position:relative;
+                .arrow{
+                    display:inline-block;
+                    // position:absolute;
+                    // right: 2px;top:18px;
+                    margin-left: 4px;
+                    width: 0;height: 0;
+                    border-top:5px solid #fff;
+                    border-left:5px solid transparent;
+                    border-right:5px solid transparent;
+                }
+                .audio{
+                    display:inline-block;
+                    width: 13px;height: 13px;
+                    background:url("../img/kdlicon.png") -369px -55px;
+                    margin-left: 4px;
+                }
+            }
+        }
+        li:hover{
+            background-color:#db3135;
+        }
+    }
+    .nav_ri{
+        width: 290px;
+        height: 40px;
+        margin-left: -50px;
+        background:url("../img/phone.gif") no-repeat;
+    }
+}
+#kdl_footer{
+    width:100%;
+    height: 323px;
+    margin-top: 20px;
+    .foot_link{
+        height: 162px;
+        padding:20px 0 10px 0;
+        background-color:#f03b43;
+        .link_cont{
+            width: 960px;
+            margin:0 auto;
+            dl{
+                width: 124px;height: 162px;
+                float:left;padding-left: 36px;background:url("../img/b1.gif") no-repeat;
+                dt{
+                    height: 30px;
+                    color:#fff;
+                    font-size:14px;
+                    font-weight:bold;
+                }
+                dd{height: 22px;color:#ffbec1;padding-left: 8px;background:url("../img/whitedot.gif") left center no-repeat;}
+                dd:hover{color:#fff;text-decoration:underline;}
+            }
+            dl:nth-child(2){background:url("../img/b2.gif") no-repeat;}
+            dl:nth-child(3){background:url("../img/b3.gif") no-repeat;}
+            dl:nth-child(4){background:url("../img/b4.gif") no-repeat;}
+            dl:nth-child(5){background:url("../img/b5.gif") no-repeat;}
+            dl:nth-child(6){background:url("../img/b6.gif") no-repeat;}
+        }
+    }
+    .foot_cont{
+        height: 131px;
+        .cont{
+            width: 960px;
+            margin:0 auto;
+            position:relative;
+            .copyright{
+                line-height: 30px;
+                height: 30px;
+                text-align:center;
+                a{
+                    color:#f03b43;
+                    padding:0 5px;
+                }
+            }
+            .cont_bottom{
+                height: 80px;
+                padding-top: 20px;
+                .bot_left{
+                    width: 760px;
+                    p{
+                        text-align:right;
+                        line-height: 20px;
+                        color:#656565;
+                        span{color:#f03b43;}
+                    }
+                }
+                .bot_right{width: 160px;margin-left: 30px;}
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+/* 
+* @Author: Marte
+* @Date:   2018-04-03 19:50:21
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-04-11 21:08:45
+*/
+.xzoom-small{position:relative;overflow:hidden;}
+.xzoom-small img{display:block;}
+.xzoom-small .zoom{display:none;position: absolute;width:30px;height:30px;background-color: #ccc;opacity: 0.2;}
+.xzoom-big{display:none;position: absolute;width:400px;height:300px;overflow:hidden;}
+.xzoom-big img{position: absolute;left:0;right:0;}

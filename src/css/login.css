@@ -1,0 +1,137 @@
+@charset "UTF-8";
+#kdl_login_header .container {
+  width: 990px;
+  height: 90px;
+}
+
+#kdl_login_header .container h1 {
+  width: 330px;
+  height: 90px;
+  background: url("../img/logo.jpg");
+}
+
+#kdl_login_header .container h1 a {
+  display: block;
+  margin-top: 69px;
+}
+
+#kdl_login_main .container {
+  width: 980px;
+  height: 442px;
+  border: 5px solid #f0f0f0;
+  margin-bottom: 70px;
+}
+
+#kdl_login_main .container .login_le {
+  width: 310px;
+  height: 362px;
+  padding: 40px 0 40px 64px;
+}
+
+#kdl_login_main .container .login_le form .item {
+  width: 310px;
+  height: 25px;
+  color: #555555;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+#kdl_login_main .container .login_le form .item span a {
+  color: #f54343;
+  margin-right: 8px;
+}
+
+#kdl_login_main .container .login_le form .check_item {
+  width: 310px;
+  height: 50px;
+  color: #555555;
+  font-size: 14px;
+  line-height: 25px;
+  padding-top: 2px;
+  margin-top: 5px;
+}
+
+#kdl_login_main .container .login_le form .check_item .check + span {
+  margin-right: 0;
+}
+
+#kdl_login_main .container .login_le form p {
+  color: #f54343;
+  line-height: 15px;
+  padding-left: 5px;
+}
+
+#kdl_login_main .container .login_le form .item + input {
+  width: 245px;
+  height: 16px;
+  border: 1px solid #e2e2e2;
+  font-size: 14px;
+  padding: 10px 25px 10px 35px;
+  font-family: arial,"宋体";
+  color: #999999;
+  margin-bottom: 10px;
+}
+
+#kdl_login_main .container .login_le form .btn_login {
+  width: 310px;
+  height: 42px;
+  background-color: #f54343;
+  border: 0 none;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 18px;
+}
+
+#kdl_login_main .container .login_le form #username {
+  background: url("../img/kdlphicon.png") -472px -163px no-repeat;
+}
+
+#kdl_login_main .container .login_le form #pwd {
+  background: url("../img/kdlphicon.png") -469px -201px no-repeat;
+}
+
+#kdl_login_main .container .login_le .login_bot {
+  width: 310px;
+  height: 30px;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 30px;
+}
+
+#kdl_login_main .container .login_le .login_bot p {
+  font-size: 12px;
+  line-height: 30px;
+  color: #878988;
+}
+
+#kdl_login_main .container .login_le .login_bot ul li {
+  float: left;
+  width: 43px;
+  height: 43px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 1px solid #ebebeb;
+  background: url("../img/kdlphicon.png") -380px -95px no-repeat;
+}
+
+#kdl_login_main .container .login_le .login_bot ul li:nth-child(2) {
+  background: url("../img/kdlphicon.png") -428px -95px no-repeat;
+}
+
+#kdl_login_main .container .login_le .login_bot ul li:hover {
+  border-color: #f97e87;
+}
+
+#kdl_login_main .container .login_le .login_bot ul li:nth-child(3):hover {
+  border-color: #3cb034;
+}
+
+#kdl_login_main .container .login_le .login_bot ul li:nth-child(3) {
+  background: url("../img/kdlphicon.png") -428px -143px no-repeat;
+}
+
+#kdl_login_main .container .login_ri {
+  width: 528px;
+  height: 390px;
+  padding-top: 30px;
+  text-align: center;
+}
