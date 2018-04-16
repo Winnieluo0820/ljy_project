@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-04-11 11:58:41
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-04-12 18:03:01
+* @Last Modified time: 2018-04-13 20:40:31
 */
 require(['config'],function(){
     require(['jquery','ljyBanner','zoom','common'],function($){
@@ -14,6 +14,7 @@ require(['config'],function(){
         let $approval_number=$('.goods_info').find('h4').eq(2);
         let $specifications=$('.goods_info').find('h4').eq(3);
         let $smallImgs=$('.smallImgs');
+        //ajax请求商品详细信息数据，生成html结构
         ajax({
             url:'../api/goodsdetail.php'+location.search,
             success:function(data){
@@ -28,23 +29,26 @@ require(['config'],function(){
                 let $ul=$('<ul/>');
                 let html=arr.map(function(item){
                     return `
-                            <li>
+                            <li class="no_active">
                                 <img src="${item}">
                             </li>
                             `
                 }).join('');
                 $ul.html(html);
                 $ul.appendTo($smallImgs);
+                $ul.children('li').eq(0).addClass('active');
                 for(let i=0;i<arr.length;i++){
                     $ul.children().eq(i).on('mouseenter',function(){
                         for(let i=0;i<arr.length;i++){
-                            $ul.children().eq(i).css({border:'1px solid #ddd'});
+                            $ul.children().eq(i).removeClass('active');
+                            $ul.children().eq(i).addClass('no_active');
                         }
-                        $(this).css({border:'1px solid #ff9696'});
+                        $(this).removeClass('no_active');
+                        $(this).addClass('active');
                         $img_cont.attr('src',arr[i]);
-                    //     $('.show_box').xZoom({
-                    //     width:398,height:398
-                    // })
+                        $('.show_box').xZoom({
+                            width:398,height:398
+                        })
                     })
                 }
                 //放大镜
@@ -54,9 +58,83 @@ require(['config'],function(){
                         width:398,height:398
                     })
                 });
-                
+                //商品加入购物车(cookie)
+                let $addToCart=$('.addToCart').children('a');
+                $addToCart.on('click',function(){
+                    var Cargoods = Cookie.get('goodslist') || [];
+                    if(typeof Cargoods ==="string"){
+                        Cargoods =JSON.parse(Cargoods);   
+                    }
+                    let $qty=$('.qty').next();
+                    let _qty=$qty.val()*1;
+                    var id=location.search.slice(location.search.indexOf("=")+1);
+                    var has = Cargoods.some(function(item,index){
+                        idx = index;
+                        return item.id === id;
+                    }); 
+                    if(has){
+                         Cargoods[idx].qty=Cargoods[idx].qty*1+_qty;
+                    }else{
+                        var goods = {
+                        id:id,
+                        imgurl:data[0].imgurl,
+                        name: data[0].goods_name,
+                        specifications:data[0].specifications,
+                        price:data[0].price,
+                        qty:_qty,
+                        weight:data[0].weight
+                    }
+                        Cargoods.push(goods);
+                    }
+                    Cookie.set('goodslist', JSON.stringify(Cargoods));
+                })
+                //点击左右箭头切换图片
+                let $tolast=$('.tolast');
+                let $tonext=$('.tonext');
+                let lis=$('.smallImgs').children('ul').children('li');
+                $tolast.on('click',function(){
+                    let idx;
+                    for(let i=0;i<lis.length;i++){
+                        if($(lis[i]).hasClass('active')){
+                            $(lis[i]).removeClass('active');
+                            $(lis[i]).addClass('no_active');
+                            idx=i;
+                            break;
+                        }
+                    }
+                    if(idx===0){
+                        $(lis[idx]).addClass('active');
+                        return;
+                    }else{
+                        idx--;
+                        $(lis[idx]).removeClass('no_active');
+                        $(lis[idx]).addClass('active');
+                        $img_cont.attr('src',arr[idx]);
+                    }
+                })
+                $tonext.on('click',function(){
+                    let idx;
+                    for(let i=0;i<lis.length;i++){
+                        if($(lis[i]).hasClass('active')){
+                            $(lis[i]).removeClass('active');
+                            $(lis[i]).addClass('no_active');
+                            idx=i;
+                            break;
+                        }
+                    }
+                    if(idx>=lis.length-1){
+                        $(lis[idx]).addClass('active');
+                        return;
+                    }else{
+                        idx++;
+                        $(lis[idx]).removeClass('no_active');
+                        $(lis[idx]).addClass('active');
+                        $img_cont.attr('src',arr[idx]);
+                    }
+                })
             }
         });
+        //城市门店切换
         var arr=['广州越秀','广州越秀','广州海珠','广州荔湾','北京海淀','北京朝阳','成都青羊','成都武侯','上海徐汇','上海浦东','上海静安','济南店','杭州店','西安店','南京店','昆明店','武汉雪松','武汉江汉','天津店','无锡店','重庆店','福州店','南宁店','沈阳店','深圳店','湛江店','中山店','厦门店','佛山店','汕头店',];
         var imgs=[{
                 img1:'../img/gzyx1-01.jpg',
@@ -227,9 +305,7 @@ require(['config'],function(){
         $p_phone.text(imgs[2].phone);
         $p_phone.addClass('phone');
         let $p_ad=$('<span/>');
-        let $p_i=$('<i>');
-        $p_i.appendTo($p_ad);
-        $p_ad.text(imgs[2].addr);
+        $p_ad.html('<i></i>'+imgs[2].addr);
         $p_ad.addClass('ad');
         $p_phone.appendTo($addr);
         $p_ad.appendTo($addr);
@@ -243,9 +319,9 @@ require(['config'],function(){
             $img1.attr('src',imgs[$(this).data('id')].img1);
             $img2.attr('src',imgs[$(this).data('id')].img2);
             $p_phone.text(imgs[$(this).data('id')].phone);
-            $p_ad.text(imgs[$(this).data('id')].addr);
+            $p_ad.html('<i></i>'+imgs[$(this).data('id')].addr);
         })
-        //点击更换图片
+        //点击更换图片以及信息
         $ul_img.on('click','a',function(){
             if($li1.hasClass('hide')){
                 $li1.attr('class','show');
@@ -255,5 +331,23 @@ require(['config'],function(){
                 $li2.attr('class','show');
             }
         })
+        //点击改变商品数量
+        let $add_btn=$('.addOrDe').find('.add');
+        let $de_btn=$('.addOrDe').find('.decrease');
+        $de_btn.on('click',function(){
+            let val=$('.addOrDe').prev().val();
+            if(val<=1){
+                $('.addOrDe').prev().val(1);
+            }
+            else{
+                val--;
+                $('.addOrDe').prev().val(val);
+            }
+        })
+        $add_btn.on('click',function(){
+            let val=$('.addOrDe').prev().val()*1+1;
+            $('.addOrDe').prev().val(val);
+        })
+        
     })
 });

@@ -1,6 +1,12 @@
 body{background-color: #f5f5f5;}
 #kdl_search .container{background-color: #FFF;}
-#kdl_nav .nav_le ul{display:none}
+#kdl_nav {
+    .nav_le {
+        position:relative;
+        ul{display:none;top:40px;left: 0;}
+    }
+    .nav_le:hover ul{display: block;}
+}
 #kdl_detail_main .container{
     .main_nav{
         height: 30px;background-color:#fafafa;border:1px solid #e0e0e0;padding-left: 35px;font-family:"宋体";background: url("../img/smicon01.png") -130px -210px #fafafa no-repeat;
@@ -27,15 +33,52 @@ body{background-color: #f5f5f5;}
                 padding:20px;line-height: 20px;
                 color:#787878;
             }
+            .share{
+                height: 28px;padding-left: 20px;
+                a{padding-left: 17px;height: 16px;line-height: 16px;margin-right: 6px;font-size:16px;}
+                a:nth-of-type(1){
+                    background: url("../img/icons_1_16.png") 0 0 no-repeat;
+                }
+                a:nth-of-type(2){
+                    background: url("../img/icons_1_16.png") 0 -52px no-repeat;
+                }
+                a:nth-of-type(3){
+                    background: url("../img/icons_1_16.png") 0 -104px no-repeat;
+                }
+                a:nth-of-type(4){
+                    background: url("../img/icons_1_16.png") 0 -260px no-repeat;
+                }
+                a:nth-of-type(5){
+                    background: url("../img/icons_1_16.png") 0 -208px no-repeat;
+                }
+                a:nth-of-type(6){
+                    background: url("../img/icons_1_16.png") 0 -1612px no-repeat;
+                }
+            }
             .smallImgs{
                 width: 315px;height: 64px;
-                margin: 10px auto;
+                margin: 10px auto;position:relative;
                 li{
                     float:left;
                     width: 62px;
                     width: 62px;
-                    border:1px solid #ddd;
                     img{width: 60px;height: 60px;}
+                }
+                .no_active{border:1px solid #ddd;}
+                .active{border:1px solid #ff9696;}
+                i{
+                    display: block;
+                    width: 15px;height:62px;line-height: 62px;
+                    text-align:center;font-size:20px;position:absolute;color:#999;
+                    font-family:"宋体";top: 0px;
+                    
+                }
+                i:hover{background-color: #f6f6f6;}
+                i:nth-of-type(1){
+                    left:-25px;
+                }
+                i:nth-of-type(2){
+                    right:-25px;
                 }
             }
         }
@@ -108,6 +151,13 @@ body{background-color: #f5f5f5;}
                         font-family:"宋体";
                     }
                 }
+                li:nth-child(4){
+                    h4{
+                        float:left;border:1px solid #ff7e6f;line-height: 25px;
+                        width:30px;height:25px;padding:0 10px;
+                        background: url("../kdlphicon.png") -485px -254px no-repeat;
+                    }
+                }
                 li:last-child{
                     height: 40px;
                     line-height: 40px;
@@ -154,6 +204,7 @@ body{background-color: #f5f5f5;}
                             font-family:"Microsoft yahei";
                         }
                     }
+                    em{height: 40px;line-height: 40px;margin-left: 10px;color:#878787;}
                 }
             }
             .ser{

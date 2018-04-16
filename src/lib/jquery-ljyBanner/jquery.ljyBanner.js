@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-04-03 11:09:53
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-04-09 16:41:24
+* @Last Modified time: 2018-04-15 17:10:06
 */
 //插件形式:封装对象方法插件，扩展原型对象方法
 //在jquery中fn===prototype
@@ -134,7 +134,14 @@ jQuery.fn.banner=function(opts){
                     show();
                 });
                 $('.banner_arrow_le').on('click',function(){
-                    opt.index=$page.children().filter($('[class=active]')).text();
+                    let idx;
+                    for(let i=0;i<$page.children().length;i++){
+                        if($page.children().eq(i).hasClass('active')){
+                            idx=i;
+                            break;
+                        }
+                    }
+                    opt.index=idx;
                     if(opt.index >= opt.len){
                         opt.index = 0;
                     }else if(opt.index <=1){
@@ -145,11 +152,16 @@ jQuery.fn.banner=function(opts){
                     show();
                 });
                 $('.banner_arrow_ri').on('click',function(){
-                    opt.index=$page.children().filter($('[class=active]')).text();
-                    if(opt.index >= opt.len){
-                        opt.index = 0;
-                    }else if(opt.index < 0){
-                        opt.index = opt.len-1;
+                    let idx;
+                    for(let i=0;i<$page.children().length;i++){
+                        if($page.children().eq(i).hasClass('active')){
+                            idx=i;
+                            break;
+                        }
+                    }
+                    opt.index=idx;
+                    if(opt.index >=opt.len-2||opt.index <0){
+                        return;
                     }else{
                         opt.index++;
                     }

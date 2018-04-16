@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2018-04-10 15:37:09
 * @Last Modified by:   Marte
-* @Last Modified time: 2018-04-12 16:14:19
+* @Last Modified time: 2018-04-15 16:49:52
 */
 require(['config'],function(){
     require(['jquery','ljyBanner','common'],function($){
@@ -35,7 +35,7 @@ require(['config'],function(){
                                 <p>￥&nbsp;${item.price}<span class="fr">在售</span></p>
                                 <div class="bot clearfix">
                                     <input type="text" value="1">
-                                    <span class="fl">
+                                    <span class="fl addOrDe">
                                         <a class="add"></a>
                                         <a class="decrease"></a>
                                     </span>
@@ -70,10 +70,24 @@ require(['config'],function(){
                 }
                 //点击商品跳转到详情页（传递id）
                 for(let i=0;i<goodslist.children[0].children.length;i++){
-                    goodslist.children[0].children[i].onclick=function(){
-                        location.href='../html/goodsdetail.html?id='+this.dataset.id;
+                    goodslist.children[0].children[i].children[0].onclick=function(){
+                        
+                        location.href='../html/goodsdetail.html?id='+this.parentNode.dataset.id;
                     }
                 }
+                //点击改变商品数量
+                $(ul).on('click','.add',function(){
+                    this.parentNode.previousElementSibling.value++;
+                })
+                $(ul).on('click','.decrease',function(){
+                    if(Number(this.parentNode.previousElementSibling.value)<=1){
+                        this.parentNode.previousElementSibling.value=1;
+                    }
+                    else{
+                        this.parentNode.previousElementSibling.value--;
+                    }   
+                })
+                
             }
         };
         xhr.open('get','../api/goodslist.php?qty='+qty+'&page='+page_num,true);
@@ -367,5 +381,6 @@ require(['config'],function(){
                 $nav3.addClass('hide');
             }  
         })
+
     });
 });

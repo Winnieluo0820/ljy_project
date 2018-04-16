@@ -1,4 +1,10 @@
-#kdl_nav .nav_le ul{display:none;}
+#kdl_nav {
+    .nav_le {
+        position:relative;
+        ul{display:none;top:40px;left: 0;}
+    }
+    .nav_le:hover ul{display: block;}
+}
 #kdl_list_main .container{
     .main_nav{
         height: 30px;background-color:#fafafa;border:1px solid #e0e0e0;padding-left: 35px;font-family:"宋体";background: url("../img/smicon01.png") -130px -210px #fafafa no-repeat;

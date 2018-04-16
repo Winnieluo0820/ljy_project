@@ -1,6 +1,16 @@
 @charset "UTF-8";
+#kdl_nav .nav_le {
+  position: relative;
+}
+
 #kdl_nav .nav_le ul {
   display: none;
+  top: 40px;
+  left: 0;
+}
+
+#kdl_nav .nav_le:hover ul {
+  display: block;
 }
 
 #kdl_list_main .container .main_nav {

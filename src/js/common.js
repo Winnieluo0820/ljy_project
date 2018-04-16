@@ -349,7 +349,7 @@ function animate(ele,opt,callback){
 
 
 			ele.style[attr] = current + unit;
-		},30);
+		},1000);
 	}
 }
 // animate(box,'opacity',1);
